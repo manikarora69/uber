@@ -1,0 +1,37 @@
+# Story entries in build order. IDs are permanent and never reused.
+
+[[entry]]
+id = 1
+type = "story"
+title = "Submit one ride request"
+description = "As a rider, I want my confirmed ride request to be created once so that retries do not book duplicate rides."
+verify = "Given a valid authenticated rider, serviceable route, selected category, and eligible payment arrangement, when the rider confirms, then one uniquely identified request is created."
+covers = ["R7"]
+after = []
+hitl = false
+risk = "high"
+refine = true
+
+[[entry]]
+id = 2
+type = "story"
+title = "Follow matching and recover from cancellation"
+description = "As a rider, I want clear matching, no-driver, and cancellation states so that I know what happened and what I can do next."
+verify = "Given a request is pending, when matching is in progress, then the app shows that status and keeps it current."
+covers = ["R8", "R11"]
+after = [1]
+hitl = false
+risk = "high"
+refine = true
+
+[[entry]]
+id = 3
+type = "story"
+title = "Identify and coordinate with the matched driver"
+description = "As a rider, I want to see the matched driver's details and approach and contact them safely so that I can meet the correct vehicle."
+verify = "Given a driver accepts, when the match is shown, then the driver's name and photo where available, plus vehicle make, model, color, and registration identifier as permitted by market policy, are displayed."
+covers = ["R9", "R10"]
+after = [2]
+hitl = false
+risk = "high"
+refine = true

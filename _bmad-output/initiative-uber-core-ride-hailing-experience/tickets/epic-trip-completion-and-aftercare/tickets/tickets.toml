@@ -1,0 +1,25 @@
+# Story entries in build order. IDs are permanent and never reused.
+
+[[entry]]
+id = 1
+type = "story"
+title = "Pay and review a completed trip"
+description = "As a rider, I want a clear final fare, payment result, and receipt so that I can verify and retain the trip record."
+verify = "Given a trip completes, when the final fare is available, then the rider sees an itemized fare consistent with the payment record, plus trip date, route summary, payment method, and support path on the receipt."
+covers = ["R2", "R15", "R16"]
+after = []
+hitl = false
+risk = "high"
+refine = true
+
+[[entry]]
+id = 2
+type = "story"
+title = "Rate a trip and resolve an issue"
+description = "As a rider, I want to rate a completed trip, report an issue, and track support so that I can give feedback and get a response."
+verify = "Given a completed trip, when the rider submits a rating, then one rating is associated with that trip; optional structured/free-text feedback can be added."
+covers = ["R17", "R18"]
+after = [1]
+hitl = false
+risk = "high"
+refine = true

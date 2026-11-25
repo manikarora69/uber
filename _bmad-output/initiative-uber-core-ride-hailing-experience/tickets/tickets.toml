@@ -1,0 +1,40 @@
+# Approved epic breakdown. Table order is build order.
+
+[[epic]]
+id = 1
+slug = "epic-rider-trip-setup"
+title = "Rider account and trip setup"
+description = "A rider can open the deployed app, access an account, enter a trip, and see whether the route is serviceable.  "
+covers = ["R1", "R3", "R4"]
+
+[[epic]]
+id = 2
+slug = "epic-ride-options-and-fare-transparency"
+title = "Ride options and fare transparency"
+description = "A rider can compare available rides and confirm the displayed price conditions before requesting.  "
+covers = ["R5", "R6"]
+after = [{ epic = 1, needs = "Epic 1 provides an authenticated rider and a serviceable route." }]
+
+[[epic]]
+id = 3
+slug = "epic-ride-request-matching-pickup"
+title = "Ride request, matching, and pickup"
+description = "A rider can create one request, understand matching and cancellation outcomes, and identify and meet the matched driver.  "
+covers = ["R7", "R8", "R9", "R10", "R11"]
+after = [{ epic = 2, needs = "Epic 2 provides a selected category and rider-confirmed price." }]
+
+[[epic]]
+id = 4
+slug = "epic-in-trip-visibility-safety"
+title = "In-trip visibility and safety"
+description = "A rider can follow an active trip, share approved information, and reach market-supported safety help.  "
+covers = ["R12", "R13", "R14"]
+after = [{ epic = 3, needs = "Epic 3 provides a matched driver and active trip state." }]
+
+[[epic]]
+id = 5
+slug = "epic-trip-completion-and-aftercare"
+title = "Trip completion and aftercare"
+description = "A rider can pay for a completed trip, find the fare and receipt later, and get recourse for a trip issue.  "
+covers = ["R2", "R15", "R16", "R17", "R18"]
+after = [{ epic = 4, needs = "Epic 4 provides a completed trip and final trip state." }]

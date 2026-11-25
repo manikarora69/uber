@@ -1,0 +1,37 @@
+# Story entries in build order. IDs are permanent and never reused.
+
+[[entry]]
+id = 1
+type = "story"
+title = "Track trip progress"
+description = "As a rider, I want current trip status, route, destination, and ETA so that I can follow my journey."
+verify = "Given a trip is active, when trip data is current, then the rider sees status, destination, route, and estimated arrival."
+covers = ["R12"]
+after = []
+hitl = false
+risk = "high"
+refine = true
+
+[[entry]]
+id = 2
+type = "story"
+title = "Share an active trip"
+description = "As a rider, I want to share approved trip details with someone I trust so that they can follow my journey."
+verify = "Given an active trip, when the rider selects sharing, then an available sharing method can be chosen from the trip screen."
+covers = ["R13"]
+after = [1]
+hitl = false
+risk = "high"
+refine = true
+
+[[entry]]
+id = 3
+type = "story"
+title = "Reach safety help and report a mismatch"
+description = "As a rider, I want to reach emergency/support options and report a driver or vehicle mismatch so that I can act when I feel unsafe."
+verify = "Given an active trip, when the rider opens safety help, then market-supported emergency and support actions are visible and accessible."
+covers = ["R14"]
+after = [2]
+hitl = false
+risk = "high"
+refine = true

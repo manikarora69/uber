@@ -1,0 +1,25 @@
+# Story entries in build order. IDs are permanent and never reused.
+
+[[entry]]
+id = 1
+type = "story"
+title = "Compare available ride options"
+description = "As a rider, I want to compare eligible ride categories, pickup ETAs, and attributes so that I can choose an option that fits my trip."
+verify = "Given a serviceable route, when ride options load, then only currently eligible and available categories are selectable."
+covers = ["R5"]
+after = []
+hitl = false
+risk = "medium"
+refine = true
+
+[[entry]]
+id = 2
+type = "story"
+title = "Understand and confirm fare conditions"
+description = "As a rider, I want to see known fare components and any high-demand price before requesting so that I can make an informed choice."
+verify = "Given an estimate is shown, when the rider reviews it, then known fare components and applicable fees are available before confirmation."
+covers = ["R6"]
+after = [1]
+hitl = false
+risk = "high"
+refine = true

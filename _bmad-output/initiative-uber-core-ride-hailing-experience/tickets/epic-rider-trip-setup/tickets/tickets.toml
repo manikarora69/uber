@@ -1,0 +1,37 @@
+# Story entries in build order. IDs are permanent and never reused.
+
+[[entry]]
+id = 1
+type = "story"
+title = "Open the rider app and access an account"
+description = "As a rider, I want to register or sign in securely so that I can start booking."
+verify = "Given a clean baseline build, when it is deployed and opened, then the rider sees sign-in and registration entry points."
+covers = ["R1"]
+after = []
+hitl = true
+risk = "high"
+refine = true
+
+[[entry]]
+id = 2
+type = "story"
+title = "Set and adjust pickup and destination"
+description = "As a rider, I want to set my pickup and destination using location, search, or the map so that I can define where I need to go."
+verify = "Given foreground location permission and adequate location accuracy, when the rider opens trip setup, then current location is suggested as pickup and can be reviewed or moved."
+covers = ["R3"]
+after = [1]
+hitl = false
+risk = "high"
+refine = true
+
+[[entry]]
+id = 3
+type = "story"
+title = "Check route serviceability"
+description = "As a rider, I want the app to validate pickup and destination before I request so that I know whether the trip can be served."
+verify = "Given a serviceable pickup and destination, when validation completes, then trip setup can continue to ride options."
+covers = ["R4"]
+after = [2]
+hitl = false
+risk = "medium"
+refine = true
